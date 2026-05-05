@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="SamBot AI Interface" />
+        <title>SamBot</title>
+
+        <link rel="stylesheet" href="./static/CSS/styles.css" />
+
+        <script type="module">
+            import App from "./static/JS/SamBot.js";
+
+            const app = new App();
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to SamBot!</h1>
+        </header>
+
+        <p>SamBot is an AI-powered chatbot designed to assist you with solving your coding problems. 
+            To start, type your message in the input window below and press submit. 
+            SamBot will do his best to help guide you to arrive at the answer on your own.</p>
+
+        <div class="wrapper">
+
+            <main class="container">
+
+                <div class="left">
+                    <img class="status" id="aiStatus" src="./static/images/idle.png" width="200">
+                </div>
+
+                <div class="chat">
+                    <div id="chat-messages">
+                        <!-- AI + user messages go here -->
+                        <!-- <p>SamBot is currently loading...</p> -->
+                    </div>
+                </div>
+
+                <div class="input">
+                    
+                    <form id="add-post" disabled>
+                        <label class="form-label" for="message-body">Write a message</label>
+                        <input class="form-text" id="message-body" type="text" />
+
+                        <button class="form-button" id="submit-button">Submit</button>
+                    </form>
+                </div>
+
+            </main>
+        </div> <!-- end .wrapper <div> -->
+    </body>
+</html>

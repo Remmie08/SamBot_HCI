@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family:'Courier New', Courier, monospace
+}
+
+/* Page Wrapper */
+
+.wrapper {
+    max-inline-size: 1400px;
+    margin: auto;
+}
+
+/* Header and Navbar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-block-end: 2px solid black;
+}
+
+.navbar-icon {
+    inline-size: 3em;
+    padding: 5px;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: dotted;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  gap: 10px;
+}
+
+/* LEFT SIDE (AI IMAGE) */
+.left {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-bottom: 3px solid #ddd;
+  border-top: 3px solid #ddd;
+  border-left: 3px solid #ddd;
+  border-right: 3px solid #ddd;
+}
+
+.left img {
+  width: 230px;
+  height: auto;
+  transition: opacity 0.2s ease;
+}
+
+/* CHAT AREA (TOP RIGHT) */
+.chat {
+  grid-column: 2;
+  grid-row: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f0f0f0;
+  border-bottom: 3px solid #ddd;
+  border-top: 3px solid #ddd;
+  border-left: 3px solid #ddd;
+  border-right: 3px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+/* INPUT AREA (BOTTOM RIGHT) */
+.input {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #fafafa;
+}
+
+.input input {
+  flex: 1;
+  padding: 10px;
+}
+
+.input button {
+  padding: 10px 15px;
+}
+
+/* Form */
+
+form {
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 10px;
+
+    @media (width < 800px) {
+        inline-size: 60vw;
+    }
+}
+
+.form-label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-inline-start: 10px;
+    color: #93acce;
+}
+
+.form-text {
+    inline-size: 100%;
+    padding: 10px;
+    border: 1px solid #849ab7;
+    font-size: 1rem;
+    color: #60799c;
+
+    margin-block: 10px;
+
+    border-radius: 10px;
+
+    resize: none;
+}
+
+.form-button {
+    font-family:'Courier New', Courier, monospace;
+    inline-size: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    background-color: #b5d1f9;
+    color: #60799c;
+}
+
+.form-button:hover {
+    background-color: #7593bc;
+    color: #b5d1f9;
+}
+
+.status {
+    width: 200px;
+}
